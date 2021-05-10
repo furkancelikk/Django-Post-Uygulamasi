@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if  object_list %}
+
+        {% for post in object_list %}       
+            <div class="w-100 border p-3">
+                <div>
+                    <h2> <a href="{% url 'post-detail' post.pk %}"> {{post.title}} </a> </h2>
+                    <p class="text-uppercase"> {{post.author.username}} </p>
+                </div>
+                <p> {{post.body |slice:"0:100"}}... </p>
+            </div>
+        {% endfor %}
+
+    {% else %}
+        <p>Henüz bir post paylaşılmadı</p>
+
+            
+    {% endif %}
+
+{% endblock content %}

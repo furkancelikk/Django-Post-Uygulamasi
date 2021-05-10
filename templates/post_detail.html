@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="p-4">
+        <div>
+            <h2 class="text-primary"> {{object.title}} </h2>
+            <p class="text-uppercase"> {{object.author.username}} </p>
+        </div>
+        <p> {{object.body}} </p>
+    </div>
+
+
+    {% if user.is_authenticated and post.author == user  %}
+        <div class="p-4">
+            <p> <a href="{% url 'post_edit' post.pk %}"> +Edit blog post </a> </p>
+            <p> <a href="{% url 'post_delete' post.pk %}"> +Delete blog post </a> </p>
+        </div>
+    {% endif %}
+
+{% endblock content %}

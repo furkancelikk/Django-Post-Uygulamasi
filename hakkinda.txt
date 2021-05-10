@@ -1,0 +1,28 @@
+basit bir post paylaşma uygulaması
+
+kayıt olmamış kullanıcılar postları sadece okuyabilirler
+sadece kayıtlı kullanıcılar yeni post paylaşabilir
+kendi postlarını düzenleme ve silme yetkilerine sahiptirler
+kayıtlı kullanıcılar kendi paylaşmadığı postları sadece okuyabilirler
+
+django admin paneli bulunmakta
+
+
+
+admin:
+    username: furkan
+    password: furkan
+
+
+kullanıcılar:
+    username: çelik
+    password: çelik123456
+    
+    username: deneme
+    password: deneme123456
+
+çalıştırılmadan önce:
+    
+    'pip install django' ile django indirilmeli
+
+    sonrasında manage.py dosyasının bulunduğu dizinde 'python manage.py runserver' komutu ile uygulama başlatılabilir.
